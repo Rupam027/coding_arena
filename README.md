@@ -1,2 +1,2 @@
-# devils_arena
+# coding_arena
 An online coding platform 
