@@ -1,0 +1,30 @@
+{
+  "name": "codearena",
+  "version": "1.0.0",
+  "description": "An Online Coding editor ",
+  "main": "server.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "mongoose": "^5.12.5",
+    "path": "^0.12.7",
+    "static-serve": "^0.0.1",
+    "x-www-form-urlencode": "^0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rupam027/devils_arena.git"
+  },
+  "members": ["Rupam","Saptarshi" , "Rounak" , "Renesa" , "Sandip" , "Shouvik"] , 
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rupam027/devils_arena/issues"
+  },
+  "homepage": "https://github.com/Rupam027/devils_arena#readme"
+}
