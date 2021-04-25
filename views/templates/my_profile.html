@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <title>My Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        #form {
+            padding-top: 50px;
+            margin-top: 50px;
+            padding-bottom: 180px;;
+            width: 50%;
+        }
+        body {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class = "container">
+                <div class="navbar-header">
+                    <a href="HomePage.html" class="navbar-brand"><span class="glyphicon glyphicon-home"></span> Home Page</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="Signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="LogIn.html"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container" id = "form">
+            <div class="panel panel-primary">  
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>My Profile</strong></h3>  
+                </div>
+                <div class="panel-body">  
+                    <p class = "text-warning">After changing click on checkbox and submit</p>
+                    <form>
+						<div class="form-group">
+							<div class="text-center">
+								<img src="./profile_logo.jpg" class="rounded">
+							</div>	
+							<br>
+                            <label for="email">Name</label>
+                            <input type="email" class="form-control" id="email" placeholder="ABCD" name="email">
+                        </div>
+						<br>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="xyz@gmail.com" name="email">
+                        </div>
+						<br>
+                        <div class="form-group">
+                            <label for="pwd">Phone Number</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="0123456789" name="pwd">
+                        </div>
+						<br>
+                        <button type="Submit" class="btn btn-success">Update</button>
+                    </form>
+                </div>
+            </div>  
+        </div>
+    </header>
+</body>
