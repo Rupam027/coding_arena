@@ -1,5 +1,5 @@
 const mongo = require('mongoose') ; 
-const url = "mongodb+srv://Rupam:rupam2000@sampledb.yrmym.mongodb.net/ARENA?retryWrites=true&w=majority" ;
+const url = process.env['MONGO_URL'] ;
 
 mongo.connect(url , { useNewUrlParser: true ,useUnifiedTopology: true }).then(()=>{
 	console.log("Database connected"); 
