@@ -60,9 +60,12 @@ function getOutput(outputId, callback) {
         )
         .then( response => response.json() )
         .then( outputData => {
-			 console.log(outputData);
-			
-		callback(null, outputData); 
+			 if (outputData.status === 'IN-QUEUE'){
+						console.log(outputData);
+                        getOutput(outputId, callback);
+			 }
+                else
+                        callback(undefined, outputData)
 		}).catch( err => callback(err, null) )
 }
 

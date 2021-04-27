@@ -7,62 +7,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/indexhome.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/ace.js"></script>
-<script>	
-function stheme()
-{
-	var select = document.getElementById("theme").value ;
-	if(select == "light")
-	editor.setTheme("ace/theme/solarized_light");
-	
-	
-	if(select == "dark")
-	editor.setTheme("ace/theme/solarized_dark");
-}
+	<script src="/js/editor.js"></script>
 
-	
-function theme()
-{
-		
-		var select = document.getElementById("language").value ; 
-		
-		
-		if(select == "java")
-		{
-		console.log("java");
-		editor.session.setMode("ace/mode/java");
-		editor.setValue("/*WELCOME TO CODING ARENA . \n YOUR CODE GOES HERE*/");   
-		editor.clearSelection();
-		}
-		
-		if(select == "python")
-		{
-		
-		console.log("python");
-		editor.session.setMode("ace/mode/python");
-		editor.setValue("#WELCOME TO CODING ARENA .\n#YOUR CODE GOES HERE*/");
-		editor.clearSelection();
-		}
-		
-		if(select == "c") 
-		{
-		console.log("c");
-		editor.session.setMode("ace/mode/c_cpp");
-		editor.setValue("/*WELCOME TO CODING ARENA . \n YOUR CODE GOES HERE*/");
-		editor.clearSelection();
-		}
-		
-		if(select == "c++")
-		{
-		console.log("c++");
-		editor.session.setMode("ace/mode/c_cpp");
-		editor.setValue("/*WELCOME TO CODING ARENA . \n YOUR CODE GOES HERE*/");
-		editor.clearSelection();
-		}
-		
-	
-	
-}       
-</script>
 </head>
 <body style="background-color: #A9A9F5;"> 
 <header>
@@ -110,15 +56,15 @@ YOUR CODE GOES HERE
 <td>
 <h3> Input </h3>
 <br/>
-<textarea rows="6" cols="50" > </textarea> 
+<textarea id="user_input" rows="6" cols="50" ></textarea> 
 </td>
 
-<td><button class="btn btn-success btn-lg" >RUN</button></td>
+<td><button class="btn btn-success btn-lg" type="button" onclick="compile()">RUN</button></td>
 
 <td>
 <h3> Output </h3>
 <br/>
-<textarea rows="6" cols="50" ></textarea> 
+<textarea rows="6" cols="50" readonly id="output"></textarea> 
 
 <td>
 </tr>
