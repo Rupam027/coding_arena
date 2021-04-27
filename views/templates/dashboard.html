@@ -56,7 +56,7 @@ YOUR CODE GOES HERE
 <td>
 <h3> Input </h3>
 <br/>
-<textarea id="user_input" rows="6" cols="50" ></textarea> 
+<textarea id="user_input" rows="6" cols="50" style="background-color : black; color : green;"></textarea> 
 </td>
 
 <td><button class="btn btn-success btn-lg" type="button" onclick="compile()">RUN</button></td>
@@ -64,7 +64,7 @@ YOUR CODE GOES HERE
 <td>
 <h3> Output </h3>
 <br/>
-<textarea rows="6" cols="50" readonly id="output"></textarea> 
+<textarea rows="6" cols="50" readonly id="output" style="background-color : black; color : green;"></textarea> 
 
 <td>
 </tr>
@@ -74,6 +74,8 @@ YOUR CODE GOES HERE
 </body>
 
 <script>
+	if(sessionStorage.getItem("User") != null) 
+	alert("WELCOME TO CODE ARENA")
  
 	var editor = ace.edit("editor");
 	

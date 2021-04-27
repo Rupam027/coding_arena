@@ -84,9 +84,13 @@ function login(){
 		}
 	}).then(res=>res.json()).then(json => {
 		if(json.user_exist == true)
+		{
+		sessionStorage.setItem("User" , json.user_exist) ;
 		window.location.href = '/dashboard';
+		 
+		}
 		else
-		window.location.href = '/login';
+		document.getElementById("login_error").innerText = "INVALID CREDENTIALS";
 		
 	}).catch(console.log) ; 
 	

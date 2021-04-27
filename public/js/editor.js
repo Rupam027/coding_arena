@@ -78,7 +78,10 @@ function compile()
 			"accept" : "application/json" ,
 			"Content-Type"  : "application/json"
 		}
-	}).then(res => res.json()).then(console.log)
+	}).then(res => res.json()).then(json =>{
+		
+		document.getElementById("output").value = json.output ; 
+	})
 	.catch(console.log);  
 	
 	
