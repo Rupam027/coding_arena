@@ -15,7 +15,7 @@ function registration()
 		pass : pass
 	}); 
 	
-	check_user_exist(email);
+	
 
 
 	 fetch("/user/register" , {
