@@ -19,8 +19,9 @@
                 </div>
                 <div>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+                        <li id="signup" style="visibility : visible;"><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li id="login" style="visibility : visible;"><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+						<li id="logoff" style="visibility : hidden;"><a href="/login"><img src="https://www.freeiconspng.com/uploads/red-log-off-icon-11.png" width="25" height="25"/> Log Out </a></li> 
                     </ul>
                 </div>
             </div>
@@ -74,8 +75,12 @@ YOUR CODE GOES HERE
 </body>
 
 <script>
-	if(sessionStorage.getItem("User") != null) 
-	alert("WELCOME TO CODE ARENA")
+	if(sessionStorage.getItem("User") != null)
+	{
+	  document.getElementById("signup").style.visibility = "hidden" ; 
+	  document.getElementById("login").style.visibility = "hidden" ; 
+	  document.getElementById("logoff").style.visibility = "visible" ; 
+	}
  
 	var editor = ace.edit("editor");
 	

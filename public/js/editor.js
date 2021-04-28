@@ -58,7 +58,7 @@ function compile()
 {
 	
 	
-	console.log("Compiling"); 
+	
 	var editor_value = editor.getValue();
 	var language = document.getElementById("language").value;
 	var input_field = document.getElementById("user_input").value; 
@@ -70,7 +70,7 @@ function compile()
 		
 	}); 
 	
-	console.log(req) ;
+	
 	fetch('/compile' , {
 		method : "POST" , 
 		body : req , 
@@ -79,7 +79,11 @@ function compile()
 			"Content-Type"  : "application/json"
 		}
 	}).then(res => res.json()).then(json =>{
-		
+		if("cmpError" in json)
+		document.getElementById("output").value = json.cmpError ;
+		else if("rntError" in json)
+		document.getElementById("output").value = json.rntError;
+		else
 		document.getElementById("output").value = json.output ; 
 	})
 	.catch(console.log);  
