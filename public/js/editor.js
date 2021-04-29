@@ -94,6 +94,7 @@ function compile()
 function logout()
 {
 	sessionStorage.removeItem('User')
+	alert("LOGGED OUT SUCCESSFULLY !! HOPE YOU ENJOYED YOUR SESSION");
 	window.location.href = '/' ;
 	
 }
