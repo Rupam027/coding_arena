@@ -24,6 +24,7 @@ function login(){
 			if(json.user_exist == true)
 			{
 			sessionStorage.setItem("User" , json.user_exist) ;
+			alert("WELCOME BACK" + email.split('@')[0]);
 			window.location.href = '/dashboard';
 			 
 			}
